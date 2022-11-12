@@ -1,0 +1,58 @@
+
+<div class="container">
+    <form [formGroup]="roomForm" >
+        <div class="form-group">
+            <label>Picture Link</label>
+            <input type="text" class="form-control" formControlName="pic" required>
+        </div>
+        <div class="form-group">
+            <label>Type</label>
+            <input type="text" class="form-control" formControlName="type" required>
+        </div>
+        <div class="form-group">
+            <label>price</label>
+            <input type="text" class="form-control" formControlName="price" placeholder="From $xxx" required>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input type="text" class="form-control" formControlName="description" required>
+        </div>
+        <div class="form-group">
+            <label>Space</label>
+            <input type="text" class="form-control" formControlName="space" required>
+        </div>
+        <br>
+        <p class="w3-large"><i class="fa fa-bath"></i>
+        <button (click)="onSelect('shower')" [ngClass]="roomForm.value.shower?'btn btn-dark btn-rounded':'btn btn-light btn-rounded'">
+            <span *ngIf="roomForm.value.shower">Selected</span>
+            <span *ngIf="!roomForm.value.shower">Unselected</span>
+        </button>
+        <i class="fa fa-phone"></i>
+        <button (click)="onSelect('phone')" [ngClass]="roomForm.value.phone?'btn btn-dark btn-rounded':'btn btn-light btn-rounded'">
+            <span *ngIf="roomForm.value.phone">Selected</span>
+            <span *ngIf="!roomForm.value.phone">Unselected</span>
+        </button>
+        <i class="fa fa-wifi"></i>
+        <button (click)="onSelect('wi-fi')" [ngClass]="roomForm.value.wifi?'btn btn-dark btn-rounded':'btn btn-light btn-rounded'">
+            <span *ngIf="roomForm.value.wifi">Selected</span>
+            <span *ngIf="!roomForm.value.wifi">Unselected</span>
+        </button>
+        <i class="fa fa-tv"></i>
+        <button (click)="onSelect('tv')" [ngClass]="roomForm.value.tv?'btn btn-dark btn-rounded':'btn btn-light btn-rounded'">
+            <span *ngIf="roomForm.value.tv">Selected</span>
+            <span *ngIf="!roomForm.value.tv">Unselected</span>
+        </button>
+        <i class="fa fa-glass"></i>
+        <button (click)="onSelect('glass')" [ngClass]="roomForm.value.glass?'btn btn-dark btn-rounded':'btn btn-light btn-rounded'">
+            <span *ngIf="roomForm.value.glass">Selected</span>
+            <span *ngIf="!roomForm.value.glass">Unselected</span>
+        </button>
+        <i class="fa fa-cutlery"></i>
+        <button (click)="onSelect('cutlery')" [ngClass]="roomForm.value.cutlery?'btn btn-dark btn-rounded':'btn btn-light btn-rounded'">
+            <span *ngIf="roomForm.value.cutlery">Selected</span>
+            <span *ngIf="!roomForm.value.cutlery">Unselected</span>
+        </button>
+        </p>
+        <button class="btn btn-success" (click)="onSaveRoom()" routerLink="/">Save</button>
+    </form>
+</div>

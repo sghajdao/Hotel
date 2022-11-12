@@ -1,0 +1,68 @@
+<div class="w3-content" style="max-width:1532px;">
+
+    <div class="w3-container w3-margin-top" id="rooms">
+      <h3>Rooms</h3>
+      <p>Make yourself at home is our slogan. We offer the best beds in the industry. Sleep well and rest well.</p>
+    </div>
+    
+    <div class="w3-row-padding">
+      <div class="w3-col m3">
+        <label><i class="fa fa-calendar-o"></i> Check In</label>
+        <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY">
+      </div>
+      <div class="w3-col m3">
+        <label><i class="fa fa-calendar-o"></i> Check Out</label>
+        <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY">
+      </div>
+      <div class="w3-col m2">
+        <label><i class="fa fa-male"></i> Adults</label>
+        <input class="w3-input w3-border" type="number" placeholder="1">
+      </div>
+      <div class="w3-col m2">
+        <label><i class="fa fa-child"></i> Kids</label>
+        <input class="w3-input w3-border" type="number" placeholder="0">
+      </div>
+      <div class="w3-col m2">
+        <label><i class="fa fa-search"></i> Search</label>
+        <button class="w3-button w3-block w3-black">Search</button>
+      </div>
+    </div>
+  
+    <div class="w3-row-padding w3-padding-16">
+      <div class="w3-third w3-margin-bottom" *ngFor="let single of single">
+        <img src={{single.pic}} alt="Norway" style="width:100%">
+        <div class="w3-container w3-white">
+          <h3>{{single.type}}</h3>
+          <h6 class="w3-opacity">{{single.price}}</h6>
+          <p>{{single.description}}</p>
+          <p>{{single.space}}<sup>2</sup></p>
+          <p class="w3-large"><i *ngIf="single.shower" class="fa fa-bath"></i> <i *ngIf="single.phone" class="fa fa-phone"></i> <i *ngIf="single.wifi" class="fa fa-wifi"></i> <i *ngIf="single.tv" class="fa fa-tv"></i> <i *ngIf="single.glass" class="fa fa-glass"></i> <i *ngIf="single.cutlery" class="fa fa-cutlery"></i></p>
+          <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Room</button>
+        </div>
+      </div>
+
+      <div class="w3-third w3-margin-bottom" *ngFor="let double of double">
+        <img src={{double.pic}} alt="Norway" style="width:100%">
+        <div class="w3-container w3-white">
+          <h3>{{double.type}}</h3>
+          <h6 class="w3-opacity">{{double.price}}</h6>
+          <p>{{double.description}}</p>
+          <p>{{double.space}}<sup>2</sup></p>
+          <p class="w3-large"><i *ngIf="double.shower" class="fa fa-bath"></i> <i *ngIf="double.phone" class="fa fa-phone"></i> <i *ngIf="double.wifi" class="fa fa-wifi"></i> <i *ngIf="double.tv" class="fa fa-tv"></i> <i *ngIf="double.glass" class="fa fa-glass"></i> <i *ngIf="double.cutlery" class="fa fa-cutlery"></i></p>
+          <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Room</button>
+        </div>
+      </div>
+
+      <div class="w3-third w3-margin-bottom" *ngFor="let deluxe of deluxe">
+        <img src={{deluxe.pic}} alt="Norway" style="width:100%">
+        <div class="w3-container w3-white">
+          <h3>{{deluxe.type}}</h3>
+          <h6 class="w3-opacity">{{deluxe.price}}</h6>
+          <p>{{deluxe.description}}</p>
+          <p>{{deluxe.space}}<sup>2</sup></p>
+          <p class="w3-large"><i *ngIf="deluxe.shower" class="fa fa-bath"></i> <i *ngIf="deluxe.phone" class="fa fa-phone"></i> <i *ngIf="deluxe.wifi" class="fa fa-wifi"></i> <i *ngIf="deluxe.tv" class="fa fa-tv"></i> <i *ngIf="deluxe.glass" class="fa fa-glass"></i> <i *ngIf="deluxe.cutlery" class="fa fa-cutlery"></i></p>
+          <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Room</button>
+        </div>
+      </div>
+    </div>
+    </div>
