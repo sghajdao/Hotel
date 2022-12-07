@@ -14,6 +14,7 @@ import { getLocaleDateFormat } from '@angular/common';
 export class HotelFormulComponent implements OnInit {
 
   customerData:FormGroup;
+  validator:number[] = [1, 1];
 
   date?:Date = new Date();
   day?:string = this.date?.toLocaleDateString();
@@ -39,5 +40,13 @@ export class HotelFormulComponent implements OnInit {
     else {this.service.roomType = 3;}
     if (this.customerData.value.check_in && this.customerData.value.check_out)
     {this.router.navigate(["/available"])}
+    if(!this.customerData.value.check_in)
+    {this.validator[0] = 0}
+    else if(this.customerData.value.check_in)
+    {this.validator[0] = 1}
+    if(!this.customerData.value.check_out)
+    {this.validator[1] = 0}
+    else if(this.customerData.value.check_out)
+    {this.validator[1] = 1}
   }
 }

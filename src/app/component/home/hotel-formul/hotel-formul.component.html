@@ -8,10 +8,12 @@
           <div class="w3-half w3-margin-bottom">
             <label><i class="fa fa-calendar-o"></i> Check In</label>
             <input class="w3-input w3-border" type="date" min="{{day}}" formControlName="check_in" required>
+            <div class="alert alert-secondary" *ngIf="!validator[0]">Please chose the check-in day</div>
           </div>
           <div class="w3-half">
             <label><i class="fa fa-calendar-o"></i> Check Out</label>
             <input class="w3-input w3-border" type="date" min="{{day}}" formControlName="check_out" required>
+            <div class="alert alert-secondary" *ngIf="!validator[1]">Please chose the check-out day</div>
           </div>
         </div>
         <div class="w3-row-padding" style="margin:8px -16px;">
