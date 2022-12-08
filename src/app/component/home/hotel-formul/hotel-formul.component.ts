@@ -35,18 +35,6 @@ export class HotelFormulComponent implements OnInit {
   }
 
   goToRooms(){
-    if (this.customerData.value.adults == 1 && this.customerData.value.kids == 0) {this.service.roomType = 1;}
-    else if (this.customerData.value.adults == 2 && this.customerData.value.kids == 0) {this.service.roomType = 2;}
-    else {this.service.roomType = 3;}
-    if (this.customerData.value.check_in && this.customerData.value.check_out)
-    {this.router.navigate(["/available"])}
-    if(!this.customerData.value.check_in)
-    {this.validator[0] = 0}
-    else if(this.customerData.value.check_in)
-    {this.validator[0] = 1}
-    if(!this.customerData.value.check_out)
-    {this.validator[1] = 0}
-    else if(this.customerData.value.check_out)
-    {this.validator[1] = 1}
+    this.service.availableRooms(this.customerData, this.validator);
   }
 }

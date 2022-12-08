@@ -6,12 +6,14 @@ import { AvailableRoomsComponent } from './component/rooms/available-rooms/avail
 import { RoomAddComponent } from './component/rooms/room-add/room-add.component';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import { GuardAdminGuard } from './guard/guard-admin.guard';
+import { AboutComponent } from './component/about/about.component';
 
 const routes: Routes = [
   {path: "rooms", component:RoomsComponent},
   {path: "available", component:AvailableRoomsComponent},
   {path: "new", component:RoomAddComponent, canActivate:[GuardAdminGuard]},
   {path: "", component:HomeComponent},
+  {path: "about", component:AboutComponent},
   {path: "**", component:PageNotFoundComponent}
 ];
 

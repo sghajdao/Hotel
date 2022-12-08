@@ -3,6 +3,8 @@ import { HttpClient } from "@angular/common/http";
 import { environment } from "src/environments/environment";
 import { observable, Observable } from "rxjs";
 import { Customers, Rooms } from '../model/data.model';
+import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Injectable({providedIn:"root"})
 
@@ -10,8 +12,23 @@ export class RoomsServices{
 
     isAdmin=true;
     roomType:any;
-    constructor(private http:HttpClient){}
+    constructor(private http:HttpClient, private router:Router){}
     
+    availableRooms(customerData:FormGroup, validator:number[]){
+    if (customerData.value.adults == 1 && customerData.value.kids == 0) {this.roomType = 1;}
+    else if (customerData.value.adults == 2 && customerData.value.kids == 0) {this.roomType = 2;}
+    else {this.roomType = 3;}
+    if (customerData.value.check_in && customerData.value.check_out)
+    {this.router.navigate(["/available"])}
+    if(!customerData.value.check_in)
+    {validator[0] = 0}
+    else if(customerData.value.check_in)
+    {validator[0] = 1}
+    if(!customerData.value.check_out)
+    {validator[1] = 0}
+    else if(customerData.value.check_out)
+    {validator[1] = 1}
+    }
     saveCustomersMemmber(data:Customers):Observable<Customers> {
         let host=environment.host;
         return this.http.post<Customers>(host + "/customers", data);

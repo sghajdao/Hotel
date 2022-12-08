@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { AboutComponent } from './component/about/about.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     ReservationComponent,
     AvailableRoomsComponent,
     RoomAddComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
