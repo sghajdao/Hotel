@@ -4,6 +4,9 @@
         <div class="form-group">
             <label>Picture Link</label>
             <input type="text" class="form-control" formControlName="pic" required>
+            <div class="text-danger" *ngIf="!validators[0]">
+                Please choose a picture.
+            </div>
         </div>
         <div class="form-group">
             <label>Type</label>
@@ -12,18 +15,30 @@
                 <option value="Double room">Double room</option>
                 <option value="Deluxe room">Deluxe room</option>
             </select>
+            <div class="text-danger" *ngIf="!validators[1]">
+                Please choose a type.
+            </div>
         </div>
         <div class="form-group">
             <label>price</label>
             <input type="text" class="form-control" formControlName="price" placeholder="From $xxx" required>
+            <div class="text-danger" *ngIf="!validators[2]">
+                Please choose a price.
+            </div>
         </div>
         <div class="form-group">
             <label>Description</label>
             <input type="text" class="form-control" formControlName="description" required>
+            <div class="text-danger" *ngIf="!validators[3]">
+                Please choose a description.
+            </div>
         </div>
         <div class="form-group">
             <label>Space</label>
             <input type="text" class="form-control" formControlName="space" required>
+            <div class="text-danger" *ngIf="!validators[4]">
+                Please choose a space.
+            </div>
         </div>
         <br>
         <p class="w3-large"><i class="fa fa-bath"></i>
@@ -57,6 +72,6 @@
             <span *ngIf="!roomForm.value.cutlery">Unselected</span>
         </button>
         </p>
-        <button class="btn btn-success" (click)="onSaveRoom()" routerLink="/">Save</button>
+        <button class="btn btn-success" (click)="onSaveRoom()">Save</button>
     </form>
 </div>

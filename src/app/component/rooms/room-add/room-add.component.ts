@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class RoomAddComponent implements OnInit {
 
   roomForm:FormGroup
+  validators:number[] = [1, 1, 1, 1, 1]
 
   constructor(private fb:FormBuilder, private roomService:RoomsServices, private http:HttpClient, private router:Router) {
     this.roomForm = this.fb.group({
@@ -36,14 +37,24 @@ export class RoomAddComponent implements OnInit {
   onSaveRoom(){
     let room:Rooms
     room = this.roomForm.value;
-    if (this.roomForm.value.type === 'Single room'){
-      this.roomService.saveSingle(room).subscribe(data=>{alert("Success saving!"); this.router.navigate(['/'])});
+    if (this.roomForm.value.pic && this.roomForm.value.type && this.roomForm.value.price && this.roomForm.value.description && this.roomForm.value.space){
+      if (this.roomForm.value.type === 'Single room'){
+        this.roomService.saveSingle(room).subscribe(data=>{alert("Success saving!"); this.router.navigate(['/'])});
+      }
+      else if (this.roomForm.value.type === 'Double room'){
+        this.roomService.saveDouble(room).subscribe(data=>{alert("Success saving!"); this.router.navigate(['/'])});
+      }
+      else if (this.roomForm.value.type === 'Deluxe room'){
+        this.roomService.saveDeluxe(room).subscribe(data=>{alert("Success saving!"); this.router.navigate(['/'])});
+      }
+      this.router.navigate(['/']);
     }
-    else if (this.roomForm.value.type === 'Double room'){
-      this.roomService.saveDouble(room).subscribe(data=>{alert("Success saving!"); this.router.navigate(['/'])});
-    }
-    else if (this.roomForm.value.type === 'Deluxe room'){
-      this.roomService.saveDeluxe(room).subscribe(data=>{alert("Success saving!"); this.router.navigate(['/'])});
+    else{
+      if(!this.roomForm.value.pic){this.validators[0] = 0}
+      if(!this.roomForm.value.type){this.validators[1] = 0}
+      if(!this.roomForm.value.price){this.validators[2] = 0}
+      if(!this.roomForm.value.description){this.validators[3] = 0}
+      if(!this.roomForm.value.space){this.validators[4] = 0}
     }
   }
 
