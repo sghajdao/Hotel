@@ -57,6 +57,20 @@
       "glass": false,
       "cutlery": false,
       "id": 1
+    },
+    {
+      "pic": "https://cdn.pixabay.com/photo/2020/10/18/09/16/bedroom-5664221__340.jpg",
+      "type": "Double room",
+      "price": "From $149",
+      "description": "Queen-size bed",
+      "space": "25m",
+      "shower": true,
+      "phone": true,
+      "wifi": true,
+      "tv": true,
+      "glass": false,
+      "cutlery": false,
+      "id": 2
     }
   ],
   "deluxe-rooms": [
@@ -73,6 +87,34 @@
       "glass": true,
       "cutlery": true,
       "id": 1
+    },
+    {
+      "pic": "https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg",
+      "type": "Deluxe room",
+      "price": "From $199",
+      "description": "King-size bed",
+      "space": "40m",
+      "shower": true,
+      "phone": true,
+      "wifi": true,
+      "tv": true,
+      "glass": true,
+      "cutlery": true,
+      "id": 2
+    },
+    {
+      "pic": "https://cdn.pixabay.com/photo/2015/01/10/11/39/hotel-595121__340.jpg",
+      "type": "Deluxe room",
+      "price": "From $199",
+      "description": "King-size bed",
+      "space": "40m",
+      "shower": true,
+      "phone": true,
+      "wifi": true,
+      "tv": true,
+      "glass": true,
+      "cutlery": true,
+      "id": 3
     }
   ],
   "customers": []
