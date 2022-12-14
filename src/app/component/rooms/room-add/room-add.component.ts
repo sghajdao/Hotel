@@ -51,10 +51,15 @@ export class RoomAddComponent implements OnInit {
     }
     else{
       if(!this.roomForm.value.pic){this.validators[0] = 0}
+      else{this.validators[0] = 1}
       if(!this.roomForm.value.type){this.validators[1] = 0}
+      else{this.validators[1] = 1}
       if(!this.roomForm.value.price){this.validators[2] = 0}
+      else{this.validators[2] = 1}
       if(!this.roomForm.value.description){this.validators[3] = 0}
+      else{this.validators[3] = 1}
       if(!this.roomForm.value.space){this.validators[4] = 0}
+      else{this.validators[4] = 1}
     }
   }
 
