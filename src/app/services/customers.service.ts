@@ -75,5 +75,9 @@ export class RoomsServices{
         let host=environment.host;
         return this.http.get<Rooms[]>(host + '/deluxe-rooms?id=' + id);
     }
+    deleteSingle(room:Rooms):Observable<void> {
+        let host=environment.host;
+        return this.http.delete<void>(host + '/single-rooms/'+room.id);
+    }
 
 }

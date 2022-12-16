@@ -41,6 +41,20 @@
       "glass": false,
       "cutlery": false,
       "id": 3
+    },
+    {
+      "pic": "https://cdn.pixabay.com/photo/2017/04/28/22/16/room-2269594__340.jpg",
+      "type": "Single room",
+      "price": "From $99",
+      "description": "Single bed",
+      "space": "15m",
+      "shower": true,
+      "phone": true,
+      "wifi": true,
+      "tv": false,
+      "glass": false,
+      "cutlery": false,
+      "id": 4
     }
   ],
   "double-rooms": [
@@ -71,6 +85,20 @@
       "glass": false,
       "cutlery": false,
       "id": 2
+    },
+    {
+      "pic": "https://cdn.pixabay.com/photo/2014/10/16/08/39/bedroom-490779__340.jpg",
+      "type": "Double room",
+      "price": "From $149",
+      "description": "Queen-size bed",
+      "space": "25m",
+      "shower": true,
+      "phone": true,
+      "wifi": true,
+      "tv": true,
+      "glass": false,
+      "cutlery": false,
+      "id": 3
     }
   ],
   "deluxe-rooms": [

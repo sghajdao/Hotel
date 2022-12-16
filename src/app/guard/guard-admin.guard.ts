@@ -19,7 +19,7 @@ export class GuardAdminGuard implements CanActivate {
       if (this.service.isAdmin)
         resolve(true);
       else{
-        this.route.navigate(['/available'])
+        this.route.navigate(['/'])
         resolve(false);
       }
     })

@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AboutComponent } from './component/about/about.component';
+import { AllRoomsComponent } from './component/rooms/all-rooms/all-rooms.component';
+import { AdminComponent } from './component/admin/admin.component';
+import { NavBarAdminComponent } from './component/admin/nav-bar-admin/nav-bar-admin.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { AboutComponent } from './component/about/about.component';
     AvailableRoomsComponent,
     RoomAddComponent,
     PageNotFoundComponent,
-    AboutComponent
+    AboutComponent,
+    AllRoomsComponent,
+    AdminComponent,
+    NavBarAdminComponent
   ],
   imports: [
     BrowserModule,
