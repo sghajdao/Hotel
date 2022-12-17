@@ -72,6 +72,8 @@
             <span *ngIf="!roomForm.value.cutlery">Unselected</span>
         </button>
         </p>
-        <button class="btn btn-success" (click)="onSaveRoom()">Save</button>
+        <button *ngIf="!editePage" class="btn btn-success" (click)="onSaveRoom()">Add</button>
+        <button *ngIf="editePage" class="btn btn-primary" (click)="onEdite()">Edite</button>
+        <button class="btn btn-warning m-lg-2" (click)="onCancel()">Cancel</button>
     </form>
 </div>

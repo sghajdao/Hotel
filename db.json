@@ -3,7 +3,7 @@
     {
       "id": 1,
       "pic": "https://cdn.pixabay.com/photo/2016/10/18/09/02/hotel-1749602_960_720.jpg",
-      "type": "Single Room",
+      "type": "Single room",
       "price": "From $99",
       "description": "Single bed",
       "space": "15m",
@@ -29,18 +29,18 @@
       "id": 2
     },
     {
+      "id": 3,
       "pic": "https://cdn.pixabay.com/photo/2021/11/08/00/30/bedroom-6778193__340.jpg",
-      "type": "Single Room",
+      "type": "Single room",
       "price": "From $99",
       "description": "Single bed",
-      "space": "15m",
+      "space": "150m",
       "shower": true,
       "phone": true,
       "wifi": true,
       "tv": false,
       "glass": false,
-      "cutlery": false,
-      "id": 3
+      "cutlery": false
     },
     {
       "pic": "https://cdn.pixabay.com/photo/2017/04/28/22/16/room-2269594__340.jpg",
@@ -87,6 +87,7 @@
       "id": 2
     },
     {
+      "id": 3,
       "pic": "https://cdn.pixabay.com/photo/2014/10/16/08/39/bedroom-490779__340.jpg",
       "type": "Double room",
       "price": "From $149",
@@ -97,25 +98,10 @@
       "wifi": true,
       "tv": true,
       "glass": false,
-      "cutlery": false,
-      "id": 3
+      "cutlery": false
     }
   ],
   "deluxe-rooms": [
-    {
-      "pic": "https://www.w3schools.com/w3images/room_deluxe.jpg",
-      "type": "Deluxe Room",
-      "price": "From $199",
-      "description": "King-size bed",
-      "space": "40m",
-      "shower": true,
-      "phone": true,
-      "wifi": true,
-      "tv": true,
-      "glass": true,
-      "cutlery": true,
-      "id": 1
-    },
     {
       "pic": "https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg",
       "type": "Deluxe room",
@@ -131,6 +117,20 @@
       "id": 2
     },
     {
+      "pic": "https://www.w3schools.com/w3images/room_deluxe.jpg",
+      "type": "Deluxe room",
+      "price": "From $199",
+      "description": "King-size bed",
+      "space": "40m",
+      "shower": true,
+      "phone": true,
+      "wifi": true,
+      "tv": true,
+      "glass": true,
+      "cutlery": true,
+      "id": 4
+    },
+    {
       "pic": "https://cdn.pixabay.com/photo/2015/01/10/11/39/hotel-595121__340.jpg",
       "type": "Deluxe room",
       "price": "From $199",
@@ -142,7 +142,7 @@
       "tv": true,
       "glass": true,
       "cutlery": true,
-      "id": 3
+      "id": 5
     }
   ],
   "customers": []

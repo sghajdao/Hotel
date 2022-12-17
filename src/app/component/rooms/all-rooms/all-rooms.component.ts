@@ -24,6 +24,13 @@ export class AllRoomsComponent implements OnInit {
 
   onDelete(room:Rooms){
     if(confirm("Are you sure to delete "))
-      {this.service.deleteSingle(room).subscribe(data=>{alert("Success saving!"); this.router.navigate(['/'])});}
+    {
+      this.service.deleteRoom(room).subscribe(data=>{alert("Success saving!"); this.router.navigate(['/'])});
+    }
+  }
+  goToEdite(room:Rooms){
+    this.service.editedRoom = room;
+    this.service.editePage = true;
+    this.router.navigate(['/new']);
   }
 }

@@ -12,6 +12,8 @@ export class RoomsServices{
 
     isAdmin=true;
     roomType:any;
+    editePage=false;
+    editedRoom!:Rooms;
     constructor(private http:HttpClient, private router:Router){}
     
     availableRooms(customerData:FormGroup, validator:number[]){
@@ -75,9 +77,16 @@ export class RoomsServices{
         let host=environment.host;
         return this.http.get<Rooms[]>(host + '/deluxe-rooms?id=' + id);
     }
-    deleteSingle(room:Rooms):Observable<void> {
+    deleteRoom(room:Rooms):Observable<void> {
         let host=environment.host;
-        return this.http.delete<void>(host + '/single-rooms/'+room.id);
+        if (room.type === "Single room"){return this.http.delete<void>(host + '/single-rooms/'+room.id);}
+        else if(room.type === "Double room"){return this.http.delete<void>(host + '/double-rooms/'+room.id);}
+        else{return this.http.delete<void>(host + '/deluxe-rooms/'+room.id);}
     }
-
+    updateRoom(room:Rooms):Observable<Rooms> {
+        let host=environment.host;
+        if(room.type === "Single room"){return this.http.put<Rooms>(host + '/single-rooms/'+room.id, room);}
+        else if(room.type === "Double room"){return this.http.put<Rooms>(host + '/double-rooms/'+room.id, room);}
+        else{return this.http.put<Rooms>(host + '/deluxe-rooms/'+room.id, room);}
+    }
 }
