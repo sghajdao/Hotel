@@ -90,7 +90,7 @@ export class RoomAddComponent implements OnInit {
     if (service === 'cutlery'){this.roomForm.value.cutlery = !this.roomForm.value.cutlery}
   }
 
-  onEdite(){
+  onEdit(){
     this.roomService.editedRoom = this.roomForm.value
     this.roomService.updateRoom(this.roomService.editedRoom).subscribe(data=>{alert("Success saving!"); this.router.navigate(['/all'])});
   }

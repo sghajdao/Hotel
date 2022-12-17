@@ -28,7 +28,7 @@ export class AllRoomsComponent implements OnInit {
       this.service.deleteRoom(room).subscribe(data=>{alert("Success saving!"); this.router.navigate(['/'])});
     }
   }
-  goToEdite(room:Rooms){
+  goToEdit(room:Rooms){
     this.service.editedRoom = room;
     this.service.editePage = true;
     this.router.navigate(['/new']);
