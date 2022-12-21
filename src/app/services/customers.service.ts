@@ -18,8 +18,7 @@ export class RoomsServices{
     
     availableRooms(customerData:FormGroup, validator:number[]){
     if (customerData.value.adults == 1 && customerData.value.kids == 0) {this.roomType = 1;}
-    else if (customerData.value.adults == 2 && customerData.value.kids == 0) {this.roomType = 2;}
-    else {this.roomType = 3;}
+    else if (customerData.value.adults >= 2) {this.roomType = 2;}
     if (customerData.value.check_in && customerData.value.check_out)
     {this.router.navigate(["/available"])}
     if(!customerData.value.check_in)

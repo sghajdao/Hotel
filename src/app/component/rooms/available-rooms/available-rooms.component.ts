@@ -12,12 +12,12 @@ export class AvailableRoomsComponent implements OnInit {
 
   constructor(private root:Router, private servic:RoomsServices) { }
 
-  list?:Rooms[];
+  list1?:Rooms[];
+  list2?:Rooms[];
 
   ngOnInit(): void {
-    if (this.servic.roomType == 1) {this.servic.getAllSingle().subscribe(data => this.list = data);}
-    else if (this.servic.roomType == 2) {this.servic.getAllDouble().subscribe(data => this.list = data);}
-    else if (this.servic.roomType == 3) {this.servic.getAllDeluxe().subscribe(data => this.list = data);}
+    if (this.servic.roomType == 1) {this.servic.getAllSingle().subscribe(data => this.list1 = data);this.servic.getAllDeluxe().subscribe(data => this.list2 = data);}
+    else if (this.servic.roomType == 2) {this.servic.getAllDouble().subscribe(data => this.list1 = data);this.servic.getAllDeluxe().subscribe(data => this.list2 = data);}
   }
 
 }
