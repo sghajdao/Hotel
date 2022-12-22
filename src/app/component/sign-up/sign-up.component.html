@@ -3,10 +3,25 @@
         <form action="/action_page.php" [formGroup]="signUpData">
             <h1>Sign up</h1>
       
-            <input type="text" formControlName="username" placeholder="Username" />
-            <input type="email" formControlName="email" placeholder="E-mail" />
-            <input type="password" formControlName="password" placeholder="Password" />
-            <input type="password" formControlName="password2" placeholder="Retype password" />
+            <input type="text" formControlName="username" placeholder="Username" required/>
+            <div class="text-danger" *ngIf="!validators[0]">
+              Please choose a usename.
+            </div>
+            <input type="email" formControlName="email" placeholder="E-mail" required/>
+            <div class="text-danger" *ngIf="!validators[1]">
+              Please put your email.
+            </div>
+            <input type="password" formControlName="password" placeholder="Password" required/>
+            <div class="text-danger" *ngIf="!validators[2]">
+              Please choose a password.
+            </div>
+            <input type="password" formControlName="password2" placeholder="Retype password" required/>
+            <div class="text-danger" *ngIf="!validators[3]">
+              Please retype the password.
+            </div>
+            <div class="text-danger" *ngIf="validators[3] === 2">
+              those passwords are differnts.
+            </div>
       
             <button class="submit" (click)="sign_up()">Sign up</button>
             <br>
