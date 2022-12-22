@@ -37,7 +37,7 @@ export class RoomsComponent implements OnInit {
 
     this.service.getSingleById(1).subscribe(data => this.single = data);
     this.service.getDoubleById(1).subscribe(data => this.double = data);
-    this.service.getDeluxeById(1).subscribe(data => this.deluxe = data);
+    this.service.getDeluxeById(2).subscribe(data => this.deluxe = data);
   }
 
   goToRooms(){

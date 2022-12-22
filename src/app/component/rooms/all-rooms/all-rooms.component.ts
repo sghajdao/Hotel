@@ -23,7 +23,7 @@ export class AllRoomsComponent implements OnInit {
   }
 
   onDelete(room:Rooms){
-    if(confirm("Are you sure to delete "))
+    if(confirm("Are you sure to delete this room"))
     {
       this.service.deleteRoom(room).subscribe(data=>{alert("Success saving!"); this.router.navigate(['/'])});
     }

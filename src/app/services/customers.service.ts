@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "src/environments/environment";
 import { observable, Observable } from "rxjs";
-import { Customers, Rooms } from '../model/data.model';
+import { Customers, Rooms, Account } from '../model/data.model';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -45,6 +45,10 @@ export class RoomsServices{
     saveDeluxe(room:Rooms):Observable<Rooms> {
         let host=environment.host;
         return this.http.post<Rooms>(host+"/deluxe-rooms", room);
+    }
+    saveAccount(account:Account):Observable<Account>{
+        let host=environment.host;
+        return this.http.post<Account>(host+"/account", account);
     }
 
     getCustomerMember():Observable<Customers[]> {

@@ -9,6 +9,8 @@ import { GuardAdminGuard } from './guard/guard-admin.guard';
 import { AboutComponent } from './component/about/about.component';
 import { AdminComponent } from './component/admin/admin.component';
 import { AllRoomsComponent } from './component/rooms/all-rooms/all-rooms.component';
+import { LogInComponent } from './component/log-in/log-in.component';
+import { SignUpComponent } from './component/sign-up/sign-up.component';
 
 const routes: Routes = [
   {path: "rooms", component:RoomsComponent},
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path: "about", component:AboutComponent},
   {path: "admin", component:AdminComponent},
   {path: "all", component:AllRoomsComponent},
+  {path: "login", component:LogInComponent},
+  {path: "signup", component:SignUpComponent},
   {path: "**", component:PageNotFoundComponent}
 ];
 

@@ -145,5 +145,14 @@
       "id": 5
     }
   ],
+  "account": [
+    {
+      "username": "saad",
+      "email": "saad@ss.ss",
+      "password": "asd",
+      "password2": "asd",
+      "id": 1
+    }
+  ],
   "customers": []
 }

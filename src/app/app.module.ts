@@ -18,6 +18,8 @@ import { AboutComponent } from './component/about/about.component';
 import { AllRoomsComponent } from './component/rooms/all-rooms/all-rooms.component';
 import { AdminComponent } from './component/admin/admin.component';
 import { NavBarAdminComponent } from './component/admin/nav-bar-admin/nav-bar-admin.component';
+import { LogInComponent } from './component/log-in/log-in.component';
+import { SignUpComponent } from './component/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { NavBarAdminComponent } from './component/admin/nav-bar-admin/nav-bar-ad
     AboutComponent,
     AllRoomsComponent,
     AdminComponent,
-    NavBarAdminComponent
+    NavBarAdminComponent,
+    LogInComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

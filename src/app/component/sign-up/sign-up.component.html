@@ -1,0 +1,26 @@
+<div id="login-box">
+    <div class="left">
+        <form action="/action_page.php" [formGroup]="signUpData">
+            <h1>Sign up</h1>
+      
+            <input type="text" formControlName="username" placeholder="Username" />
+            <input type="email" formControlName="email" placeholder="E-mail" />
+            <input type="password" formControlName="password" placeholder="Password" />
+            <input type="password" formControlName="password2" placeholder="Retype password" />
+      
+            <button class="submit" (click)="sign_up()">Sign up</button>
+            <br>
+            <br>
+            <a href="/login">I have an account</a>
+        </form>
+    </div>
+    
+    <div class="right">
+      <span class="loginwith">Sign in with<br />social network</span>
+      
+      <button class="social-signin facebook">Log in with facebook</button>
+      <button class="social-signin twitter">Log in with Twitter</button>
+      <button class="social-signin google">Log in with Google+</button>
+    </div>
+    <div class="or">OR</div>
+  </div>

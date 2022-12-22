@@ -13,9 +13,17 @@ export interface Rooms{
     cutlery:boolean
 }
 
+export interface Account{
+    id:number,
+    username:string,
+    email:string,
+    password:string,
+    password2:string
+}
+
 export  interface Customers{
     check_in:Date,
     check_out:Date,
-    adults:number;
+    adults:number,
     kids:number
 }
