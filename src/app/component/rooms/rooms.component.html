@@ -37,7 +37,7 @@
           <p>{{single.description}}</p>
           <p>{{single.space}}<sup>2</sup></p>
           <p class="w3-large"><i *ngIf="single.shower" class="fa fa-bath"></i> <i *ngIf="single.phone" class="fa fa-phone"></i> <i *ngIf="single.wifi" class="fa fa-wifi"></i> <i *ngIf="single.tv" class="fa fa-tv"></i> <i *ngIf="single.glass" class="fa fa-glass"></i> <i *ngIf="single.cutlery" class="fa fa-cutlery"></i></p>
-          <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Room</button>
+          <button class="w3-button w3-block w3-black w3-margin-bottom" (click)="goToReservation(single)">Choose Room</button>
         </div>
       </div>
 
@@ -49,7 +49,7 @@
           <p>{{double.description}}</p>
           <p>{{double.space}}<sup>2</sup></p>
           <p class="w3-large"><i *ngIf="double.shower" class="fa fa-bath"></i> <i *ngIf="double.phone" class="fa fa-phone"></i> <i *ngIf="double.wifi" class="fa fa-wifi"></i> <i *ngIf="double.tv" class="fa fa-tv"></i> <i *ngIf="double.glass" class="fa fa-glass"></i> <i *ngIf="double.cutlery" class="fa fa-cutlery"></i></p>
-          <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Room</button>
+          <button class="w3-button w3-block w3-black w3-margin-bottom" (click)="goToReservation(double)">Choose Room</button>
         </div>
       </div>
 
@@ -61,7 +61,7 @@
           <p>{{deluxe.description}}</p>
           <p>{{deluxe.space}}<sup>2</sup></p>
           <p class="w3-large"><i *ngIf="deluxe.shower" class="fa fa-bath"></i> <i *ngIf="deluxe.phone" class="fa fa-phone"></i> <i *ngIf="deluxe.wifi" class="fa fa-wifi"></i> <i *ngIf="deluxe.tv" class="fa fa-tv"></i> <i *ngIf="deluxe.glass" class="fa fa-glass"></i> <i *ngIf="deluxe.cutlery" class="fa fa-cutlery"></i></p>
-          <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Room</button>
+          <button class="w3-button w3-block w3-black w3-margin-bottom" (click)="goToReservation(deluxe)">Choose Room</button>
         </div>
       </div>
     </div>

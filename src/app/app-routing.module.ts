@@ -11,6 +11,7 @@ import { AdminComponent } from './component/admin/admin.component';
 import { AllRoomsComponent } from './component/rooms/all-rooms/all-rooms.component';
 import { LogInComponent } from './component/log-in/log-in.component';
 import { SignUpComponent } from './component/sign-up/sign-up.component';
+import { ReservationComponent } from './component/rooms/reservation/reservation.component';
 
 const routes: Routes = [
   {path: "rooms", component:RoomsComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: "all", component:AllRoomsComponent},
   {path: "login", component:LogInComponent},
   {path: "signup", component:SignUpComponent},
+  {path: "reservation", component:ReservationComponent},
   {path: "**", component:PageNotFoundComponent}
 ];
 

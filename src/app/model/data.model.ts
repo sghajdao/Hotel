@@ -25,5 +25,7 @@ export  interface Customers{
     check_in:Date,
     check_out:Date,
     adults:number,
-    kids:number
+    kids:number,
+    phone:number,
+    email:string
 }

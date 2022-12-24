@@ -43,4 +43,9 @@ export class RoomsComponent implements OnInit {
   goToRooms(){
     this.service.availableRooms(this.customerData, this.validator);
   }
+
+  goToReservation(room:Rooms){
+    this.service.reservatedRoom = room;
+    this.root.navigate(['/reservation'])
+  }
 }
