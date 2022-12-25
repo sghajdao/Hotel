@@ -10,7 +10,7 @@
         <p>{{room.description}}</p>
         <p>{{room.space}}<sup>2</sup></p>
         <p class="w3-large"><i *ngIf="room.shower" class="fa fa-bath"></i> <i *ngIf="room.phone" class="fa fa-phone"></i> <i *ngIf="room.wifi" class="fa fa-wifi"></i> <i *ngIf="room.tv" class="fa fa-tv"></i> <i *ngIf="room.glass" class="fa fa-glass"></i> <i *ngIf="room.cutlery" class="fa fa-cutlery"></i></p>
-        <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Room</button>
+        <button class="w3-button w3-block w3-black w3-margin-bottom" (click)="goToReservation(room)">Choose Room</button>
       </div>
     </div>
   </div>
@@ -24,7 +24,7 @@
         <p>{{room.description}}</p>
         <p>{{room.space}}<sup>2</sup></p>
         <p class="w3-large"><i *ngIf="room.shower" class="fa fa-bath"></i> <i *ngIf="room.phone" class="fa fa-phone"></i> <i *ngIf="room.wifi" class="fa fa-wifi"></i> <i *ngIf="room.tv" class="fa fa-tv"></i> <i *ngIf="room.glass" class="fa fa-glass"></i> <i *ngIf="room.cutlery" class="fa fa-cutlery"></i></p>
-        <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Room</button>
+        <button class="w3-button w3-block w3-black w3-margin-bottom" (click)="goToReservation(room)">Choose Room</button>
       </div>
     </div>
   </div>

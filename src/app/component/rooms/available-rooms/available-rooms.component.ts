@@ -10,14 +10,18 @@ import { Rooms, Customers } from '../../../model/data.model';
 })
 export class AvailableRoomsComponent implements OnInit {
 
-  constructor(private root:Router, private servic:RoomsServices) { }
+  constructor(private root:Router, private service:RoomsServices) { }
 
   list1?:Rooms[];
   list2?:Rooms[];
 
   ngOnInit(): void {
-    if (this.servic.roomType == 1) {this.servic.getAllSingle().subscribe(data => this.list1 = data);this.servic.getAllDeluxe().subscribe(data => this.list2 = data);}
-    else if (this.servic.roomType == 2) {this.servic.getAllDouble().subscribe(data => this.list1 = data);this.servic.getAllDeluxe().subscribe(data => this.list2 = data);}
+    if (this.service.roomType == 1) {this.service.getAllSingle().subscribe(data => this.list1 = data);this.service.getAllDeluxe().subscribe(data => this.list2 = data);}
+    else if (this.service.roomType == 2) {this.service.getAllDouble().subscribe(data => this.list1 = data);this.service.getAllDeluxe().subscribe(data => this.list2 = data);}
   }
 
+  goToReservation(room:Rooms){
+    this.service.reservatedRoom = room;
+    this.root.navigate(['/reservation'])
+  }
 }
