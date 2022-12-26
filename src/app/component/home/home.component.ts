@@ -10,7 +10,6 @@ export class HomeComponent implements OnInit {
 
   
   constructor(private http:HttpClient) {
-    this.http.get("http://localhost:3000/rooms").subscribe(data=>console.log(data))
    }
 
   ngOnInit(): void {

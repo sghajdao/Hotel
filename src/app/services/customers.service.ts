@@ -15,6 +15,8 @@ export class RoomsServices{
     editePage=false;
     editedRoom!:Rooms;
     reservatedRoom!:Rooms
+    customerData!:Customers
+    initCustomerData = false
     constructor(private http:HttpClient, private router:Router){}
     
     availableRooms(customerData:FormGroup, validator:number[]){

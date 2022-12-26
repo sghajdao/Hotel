@@ -17,14 +17,28 @@ export class ReservationComponent implements OnInit {
   day?:string = this.date?.toLocaleDateString();
   constructor(private service:RoomsServices, private fb:FormBuilder) {
     this.pic = this.service.reservatedRoom.pic
-    this.reservation = this.fb.group({
-      check_in:['', Validators.required],
-      check_out:['', Validators.required],
-      adults:['', Validators.required],
-      kids:['', Validators.required],
-      email:['', Validators.required],
-      phone:['', Validators.required]
-    });
+    if(this.service.initCustomerData){
+      this.reservation = this.fb.group({
+        check_in:[this.service.customerData.check_in, Validators.required],
+        check_out:[this.service.customerData.check_out, Validators.required],
+        adults:[this.service.customerData.adults, Validators.required],
+        kids:[this.service.customerData.kids, Validators.required],
+        email:['', Validators.required],
+        phone:['', Validators.required]
+      });
+    }
+    else
+    {
+      this.reservation = this.fb.group({
+        check_in:['', Validators.required],
+        check_out:['', Validators.required],
+        adults:['', Validators.required],
+        kids:['', Validators.required],
+        email:['', Validators.required],
+        phone:['', Validators.required]
+      });
+    }
+    this.service.initCustomerData = false
   }
 
   ngOnInit(): void {

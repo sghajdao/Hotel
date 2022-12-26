@@ -35,6 +35,8 @@ export class HotelFormulComponent implements OnInit {
   }
 
   goToRooms(){
+    this.service.initCustomerData = true
+    this.service.customerData = this.customerData.value
     this.service.availableRooms(this.customerData, this.validator);
   }
 }

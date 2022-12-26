@@ -22,8 +22,8 @@ export interface Account{
 }
 
 export  interface Customers{
-    check_in:Date,
-    check_out:Date,
+    check_in:string,
+    check_out:string,
     adults:number,
     kids:number,
     phone:number,
