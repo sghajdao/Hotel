@@ -117,7 +117,8 @@
       "id": 2
     },
     {
-      "pic": "https://www.w3schools.com/w3images/room_deluxe.jpg",
+      "id": 4,
+      "pic": "https://cdn.pixabay.com/photo/2015/11/06/11/45/interior-1026449_960_720.jpg",
       "type": "Deluxe room",
       "price": "From $199",
       "description": "King-size bed",
@@ -127,8 +128,7 @@
       "wifi": true,
       "tv": true,
       "glass": true,
-      "cutlery": true,
-      "id": 4
+      "cutlery": true
     },
     {
       "pic": "https://cdn.pixabay.com/photo/2015/01/10/11/39/hotel-595121__340.jpg",
